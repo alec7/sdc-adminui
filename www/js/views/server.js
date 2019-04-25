@@ -164,7 +164,7 @@ var ServerView = Backbone.Marionette.Layout.extend({
         cpu_sockets: function () {
             if (this.sysinfo.hasOwnProperty('CPU Socket Count'))
                 return this.sysinfo['CPU Socket Count'];
-            // legacy value: this really is sockets
+            // legacy value: this is really number of sockets
             return this.sysinfo['CPU Physical Cores'];
         },
         cpu_cores: function () {
