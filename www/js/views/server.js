@@ -180,8 +180,8 @@ var ServerView = Backbone.Marionette.Layout.extend({
         },
         ht_enabled: function () {
             if (this.sysinfo.hasOwnProperty('Psrinfo'))
-                return this.sysinfo.Psrinfo.ht_enabled;
-            // legacy value: HT is - probably - enabled
+                return this.sysinfo.Psrinfo.smt_enabled;
+            // legacy value: SMT is - probably - enabled
             return 'true';
         },
         serial_number: function () {
