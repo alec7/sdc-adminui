@@ -178,7 +178,7 @@ var ServerView = Backbone.Marionette.Layout.extend({
             // legacy value: this is really *all* *CPUs*
             return this.sysinfo['CPU Total Cores'];
         },
-        ht_enabled: function () {
+        smt_enabled: function () {
             if (this.sysinfo.hasOwnProperty('Psrinfo'))
                 return this.sysinfo.Psrinfo.smt_enabled;
             // legacy value: SMT is - probably - enabled
